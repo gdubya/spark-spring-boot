@@ -13,7 +13,8 @@
 3. Configure Spark Properties in application.properties
 4. Adding the Spark ApplicationConfig: declaring the JavaSparkContext and SparkConf as beans (using @Bean annotation) this tell the spring container to manage them for us
 5. Creating a service/controller for Read Csv & Register a REST Controller with an endpoint
-6. Run the application, Test your application from a REST client or on Browser
+6. Run the application using `mvn spring-boot:run -Dspring-boot.run.jvmArguments="--add-exports java.base/sun.nio.ch=ALL-UNNAMED"`
+7. Test your application from a REST client or on Browser
    Url: http://localhost:8080/spark-context/read-csv
 
 ### That's it, Spark now returns output on an Enterprise web application!

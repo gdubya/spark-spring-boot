@@ -23,6 +23,7 @@ public class SparkController {
                 String.format("<h4>Total records %d</h4>", dataset.count()) +
                 String.format("<h5>Schema <br/> %s</h5> <br/> Sample data - <br/>", dataset.schema().treeString()) +
                 dataset.showString(20, 20, true);
+                //dataset.write().format("delta").save("../spark-spring-boot/src/main/resources/delta");
         return ResponseEntity.ok(html);
     }
 }
